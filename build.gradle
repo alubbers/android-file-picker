@@ -2,6 +2,8 @@ apply from: 'common.gradle'
 
 apply plugin: 'com.android.library'
 
+apply plugin: 'maven'
+
 android {
     compileSdkVersion 21
     buildToolsVersion "$androidBuildToolsVersion"
@@ -29,5 +31,18 @@ buildscript {
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+    }
+}
+
+// define the process to put the .aar file into the local maven repo
+def homePath = System.properties['user.home']
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "file://" + homePath + "/.m2/repository")
+            pom.groupId = project.group
+            pom.artifactId = project.name
+            pom.version = project.version
+        }
     }
 }
