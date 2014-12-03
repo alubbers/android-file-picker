@@ -1,0 +1,14 @@
+apply plugin: 'maven'
+
+ext {
+    projectVersion = "0.0.1-SNAPSHOT"
+    projectGroup = "org.bakchuda.android"
+    androidApplicationId = "org.bakchuda.android.filePicker"
+    androidAppCompatVersion = "21.0.2"
+    androidBuildToolsVersion = "21.1.1"
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
