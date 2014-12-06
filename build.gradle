@@ -1,9 +1,5 @@
 apply from: 'common.gradle'
 
-apply plugin: 'com.android.library'
-
-apply plugin: 'maven'
-
 android {
     compileSdkVersion 21
     buildToolsVersion "$androidBuildToolsVersion"
@@ -27,9 +23,6 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:1.0.0-rc4'
-
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
 }
 

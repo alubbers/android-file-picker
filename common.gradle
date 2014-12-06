@@ -1,5 +1,7 @@
 apply plugin: 'maven'
 
+apply plugin: 'com.android.library'
+
 ext {
     projectVersion = "0.0.1-SNAPSHOT"
     projectGroup = "org.bakchuda.android"
